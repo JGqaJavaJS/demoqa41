@@ -14,21 +14,23 @@ import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import java.time.Duration;
+
 
 public class ConfigManager { // on the lessons: BaseTest.java
 
     private static WebDriver driver;
 
-    public static WebDriverManager getDriver() {
+    public static WebDriver getDriver() {
         if(driver == null) {
-            setUp();
+            setUp("chrome");
         }
         return driver;
     }
 
-    @BeforeSuite
+   // @BeforeSuite
     @Parameters("browser")
-    private static void setUp(@Optional("chrome") String browser) {
+    public static void setUp(@Optional("chrome") String browser) {
         if(browser.equalsIgnoreCase("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--lang=en");
@@ -59,10 +61,14 @@ public class ConfigManager { // on the lessons: BaseTest.java
         else {
             throw new IllegalArgumentException("Invalid browser name: " + browser);
         }
+        driver.manage().window().maximize();
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        driver.navigate().to("https://demoqa.com/");
     }
 
-    @AfterSuite
-    private static void tearDown() {
+   // @AfterSuite
+   public static void tearDown() {
         driver.quit();
     }
 }
