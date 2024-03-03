@@ -1,6 +1,7 @@
 package config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import jdk.jfr.Threshold;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -21,7 +22,16 @@ public class ConfigManager { // on the lessons: BaseTest.java
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
-        // to change with while
+//        int counter = 0;
+//        while (driver == null || counter <= 5) {
+//            try {
+//                Thread.sleep(500);
+//            } catch (InterruptedException e) {
+//                throw new RuntimeException(e);
+//            }
+//        }
+
+        // singleton
 //        if(driver == null) {
 //            setUp("chrome");
 //        }
