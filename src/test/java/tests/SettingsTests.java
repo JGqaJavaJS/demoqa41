@@ -9,34 +9,34 @@ import org.testng.annotations.Test;
 
 public class SettingsTests extends BaseTest{
 
-@Test
-    public void test_001(){
-    //hard coding  with the folder tools and driver chrome
-        WebDriver driver = new ChromeDriver();
-        driver.navigate().to("https://demoqa.com/");
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        driver.quit();
-    }
+//@Test
+//    public void test_001(){
+//    //hard coding  with the folder tools and driver chrome
+//        WebDriver driver = new ChromeDriver();
+//        driver.navigate().to("https://demoqa.com/");
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        driver.quit();
+//    }
 
-    @Test
-    public void test_002() {
-
-    // hard coding to check webdrivermanager
-        ChromeOptions chromeOptions = new ChromeOptions();
-        WebDriverManager.chromedriver().setup();
-        WebDriver driver = new ChromeDriver(chromeOptions);
-        driver.navigate().to("https://demoqa.com/");
-        try {
-            Thread.sleep(10000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-        driver.quit();
-    }
+//    @Test
+//    public void test_002() {
+//
+//    // hard coding to check webdrivermanager
+//        ChromeOptions chromeOptions = new ChromeOptions();
+//        WebDriverManager.chromedriver().setup();
+//        WebDriver driver = new ChromeDriver(chromeOptions);
+//        driver.navigate().to("https://demoqa.com/");
+//        try {
+//            Thread.sleep(10000);
+//        } catch (InterruptedException e) {
+//            throw new RuntimeException(e);
+//        }
+//        driver.quit();
+//    }
 
 //    @Test
 //    public void test_003() {

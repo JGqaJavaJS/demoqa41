@@ -16,19 +16,19 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 import java.time.Duration;
 
-
 public class ConfigManager { // on the lessons: BaseTest.java
 
     private static WebDriver driver;
 
     public static WebDriver getDriver() {
-        if(driver == null) {
-            setUp("chrome");
-        }
+        // to change with while
+//        if(driver == null) {
+//            setUp("chrome");
+//        }
         return driver;
     }
 
-   // @BeforeSuite
+    @BeforeSuite
     @Parameters("browser")
     public static void setUp(@Optional("chrome") String browser) {
         if(browser.equalsIgnoreCase("chrome")) {
@@ -67,7 +67,7 @@ public class ConfigManager { // on the lessons: BaseTest.java
         driver.navigate().to("https://demoqa.com/");
     }
 
-   // @AfterSuite
+    @AfterSuite
    public static void tearDown() {
         driver.quit();
     }
