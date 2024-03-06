@@ -74,6 +74,11 @@ public class ConfigManager { // on the lessons: BaseTest.java
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+        //driver.navigate().to("https://demoqa.com/");
+        navigateToMainPage();
+    }
+
+    public static void navigateToMainPage() {
         driver.navigate().to("https://demoqa.com/");
     }
 

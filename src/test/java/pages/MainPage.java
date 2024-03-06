@@ -15,4 +15,8 @@ public class MainPage extends BasePage {
     public boolean validateTextElementsCorrect() {
         return isTextEqual(textElements, elements);
     }
+
+    public void openElementsPage() {
+        clickBase(textElements);
+    }
 }

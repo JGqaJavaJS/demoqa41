@@ -7,11 +7,16 @@ import org.openqa.selenium.WebElement;
 public class BasePage {
 
     protected WebElement findElementBase(By locator) {
+
         return ConfigManager.getDriver().findElement(locator);
     }
 
     protected String getTextBase(By locator) {
         return findElementBase(locator).getText().toUpperCase().trim();
+    }
+
+    protected void clickBase(By locator) {
+        findElementBase(locator).click();
     }
 
     public boolean isTextEqual(By locator, String expectedResult) {

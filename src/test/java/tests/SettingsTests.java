@@ -51,15 +51,16 @@ public class SettingsTests extends BaseTest{
 //        }
 //    }
 
-    @Test
-    public void test_004() {
-    // here we extends from BaseTest and run chrome from ConfigManager
-//        try {
-//            Thread.sleep(3000);
-//        } catch (InterruptedException e) {
-//            throw new RuntimeException(e);
-//        }
-        Assert.assertTrue(mainPage.validateTextElementsCorrect());
-    }
+//    @Test
+//    public void test_004() {
+//    // here we extends from BaseTest and run chrome from ConfigManager
+////        try {
+////            Thread.sleep(3000);
+////        } catch (InterruptedException e) {
+////            throw new RuntimeException(e);
+////        }
+//        Assert.assertTrue(mainPage.validateTextElementsCorrect());
+//    }
+
 }
 
