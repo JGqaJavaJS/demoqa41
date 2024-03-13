@@ -6,6 +6,7 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
+import utils.ScreenShotManager;
 
 public class TextBoxTests extends BaseTest {
 
@@ -34,6 +35,7 @@ public class TextBoxTests extends BaseTest {
 //        } catch (InterruptedException e) {
 //            throw new RuntimeException(e);
 //        }
+        ScreenShotManager.takeScreenshot("testForm ");
         Assert.assertTrue(textBoxPage.validateUserInfoDisplaysCorrect(textBoxUserInfo));
     }
 
