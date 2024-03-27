@@ -15,7 +15,7 @@ import java.util.Map;
 
 public class LottoTest {
     public static void main(String[] args) {
-        // путь к файлу CSV на macOS может выглядеть так: String filePath = "src/file/Lotto.csv";
+
         String filePath = "src\\file\\Lotto.csv";
         int startRow = 2;
         int startColumn = 3;
@@ -25,7 +25,7 @@ public class LottoTest {
         if(filePath.endsWith(".csv")){
             readCSV(filePath, startRow,startColumn,endColumn, endRow);
         } else if (filePath.endsWith(".xlsx")) {
-
+            readExcel(filePath, startRow,startColumn,endColumn, endRow);
         }else {
             System.out.println("Unknown format...");
         }
@@ -58,6 +58,8 @@ public class LottoTest {
 
     }
 
+    private static void readExcel(String filePath,
+                                int startRow, int startColumn, int endColumn, int endRow){}
     private static void printValueMap(Map<Integer,Integer> valueCounts){
         System.out.println("Встречаемость значений: ");
         valueCounts.entrySet()
@@ -66,10 +68,6 @@ public class LottoTest {
                 .forEach(entity -> System.out.println(entity
                         .getKey()+" : " + entity.getValue()+ " раз"));
     }
-
-
-
-
 
 
 }

@@ -6,7 +6,7 @@ import java.util.regex.Pattern;
 public class RegEx {
     public static void main(String[] args) {
         //mailSearcher();
-        phoneStringSearcher();
+        stringSearcher();
     //    phoneSearcher();
     }
 
@@ -32,7 +32,7 @@ public class RegEx {
        System.out.println("My phone number is : "+ phone);
    }
     }
-    public static  void  phoneStringSearcher(){
+    public static  void  stringSearcher(){
 
         String myString = "This is my email:";
         Pattern pattern = Pattern.compile("i.+i");
